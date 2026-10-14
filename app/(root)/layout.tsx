@@ -1,30 +1,10 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
+import { ReactNode } from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Stockify",
-  description: "Track real-time stock prices.",
-};
-
-export default function RootLayout({ children }: LayoutProps<"/">) {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <html lang="en" className="dark">
-      <body
-        className={`${geistMono.variable} ${geistSans.variable} antialiased min-h-full flex flex-col`}
-      >
-        {children}
-      </body>
-    </html>
+    <main className="min-h-screen text-gray-400">
+      <div className="container py-10">{children}</div>
+    </main>
   );
-}
+};
+export default Layout;
