@@ -190,35 +190,36 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG: MarketOverviewWidgetConfig = {
   symbolActiveColor: "rgba(15, 237, 190, 0.05)", // highlight color for active symbol
   tabs: [
     {
-      title: "Financial",
+      title: "Finance",
       symbols: [
-        { s: "NYSE:JPM", d: "JPMorgan Chase" },
-        { s: "NYSE:WFC", d: "Wells Fargo Co New" },
-        { s: "NYSE:BAC", d: "Bank Amer Corp" },
-        { s: "NYSE:HSBC", d: "Hsbc Hldgs Plc" },
-        { s: "NYSE:C", d: "Citigroup Inc" },
-        { s: "NYSE:MA", d: "Mastercard Incorporated" },
+        { s: "IDX:BBCA", d: "PT Bank Central Asia Tbk" },
+        { s: "IDX:BBRI", d: "PT Bank Rakyat Indonesia (Persero) Tbk Class B" },
+        { s: "IDX:BBNI", d: "PT Bank Negara Indonesia (Persero) Tbk Class B" },
+        { s: "IDX:BMRI", d: "PT Bank Mandiri (Persero) Tbk" },
+        { s: "IDX:BRIS", d: "PT Bank Syariah Indonesia (Persero) Tbk" },
+        { s: "IDX:ARTO", d: "PT Bank Jago Tbk" },
       ],
     },
     {
       title: "Technology",
       symbols: [
-        { s: "NASDAQ:AAPL", d: "Apple" },
-        { s: "NASDAQ:GOOGL", d: "Alphabet" },
-        { s: "NASDAQ:MSFT", d: "Microsoft" },
-        { s: "NASDAQ:FB", d: "Meta Platforms" },
-        { s: "NYSE:ORCL", d: "Oracle Corp" },
-        { s: "NASDAQ:INTC", d: "Intel Corp" },
+        { s: "IDX:GOTO", d: "PT GoTo Gojek Tokopedia Tbk" },
+        { s: "IDX:BUKA", d: "PT Bukalapak.com Tbk" },
+        { s: "IDX:EMTK", d: "PT Elang Mahkota Teknologi Tbk" },
+        { s: "IDX:DCII", d: "PT DCI Indonesia Tbk" },
+        { s: "IDX:MTDL", d: "PT Metrodata Electronics Tbk" },
+        { s: "IDX:WIFI", d: "PT Solusi Sinergi Digital Tbk" },
       ],
     },
     {
-      title: "Services",
+      title: "Energy & Resources",
       symbols: [
-        { s: "NASDAQ:AMZN", d: "Amazon" },
-        { s: "NYSE:BABA", d: "Alibaba Group Hldg Ltd" },
-        { s: "NYSE:T", d: "At&t Inc" },
-        { s: "NYSE:WMT", d: "Walmart" },
-        { s: "NYSE:V", d: "Visa" },
+        { s: "IDX:ANTM", d: "PT ANTAM (Persero) Tbk" },
+        { s: "IDX:PGEO", d: "PT Pertamina Geothermal Energy Tbk" },
+        { s: "IDX:ADRO", d: "PT Alamtri Resources Indonesia Tbk" },
+        { s: "IDX:PTBA", d: "PT Bukit Asam (Persero) Tbk" },
+        { s: "IDX:ITMG", d: "PT Indo Tambangraya Megah Tbk" },
+        { s: "IDX:MEDC", d: "PT Medco Energi Internasional Tbk" },
       ],
     },
   ],
@@ -231,7 +232,7 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG: MarketOverviewWidgetConfig = {
 };
 
 export const HEATMAP_WIDGET_CONFIG: HeatmapWidgetConfig = {
-  dataSource: "SPX500",
+  dataSource: "AllID",
   blockSize: "market_cap_basic",
   blockColor: "change",
   grouping: "sector",
@@ -239,7 +240,7 @@ export const HEATMAP_WIDGET_CONFIG: HeatmapWidgetConfig = {
   locale: "en",
   symbolUrl: "",
   colorTheme: "dark",
-  exchanges: [],
+  exchanges: ["IDX"],
   hasTopBar: false,
   isDataSetEnabled: false,
   isZoomEnabled: true,
@@ -271,35 +272,45 @@ export const MARKET_DATA_WIDGET_CONFIG: MarketDataWidgetConfig = {
   backgroundColor: "#0F0F0F",
   symbolsGroups: [
     {
-      name: "Financial",
+      name: "Finance",
       symbols: [
-        { name: "NYSE:JPM", displayName: "JPMorgan Chase" },
-        { name: "NYSE:WFC", displayName: "Wells Fargo Co New" },
-        { name: "NYSE:BAC", displayName: "Bank Amer Corp" },
-        { name: "NYSE:HSBC", displayName: "Hsbc Hldgs Plc" },
-        { name: "NYSE:C", displayName: "Citigroup Inc" },
-        { name: "NYSE:MA", displayName: "Mastercard Incorporated" },
+        { name: "IDX:BBCA", displayName: "PT Bank Central Asia Tbk" },
+        {
+          name: "IDX:BBRI",
+          displayName: "PT Bank Rakyat Indonesia (Persero) Tbk Class B",
+        },
+        {
+          name: "IDX:BBNI",
+          displayName: "PT Bank Negara Indonesia (Persero) Tbk Class B",
+        },
+        { name: "IDX:BMRI", displayName: "PT Bank Mandiri (Persero) Tbk" },
+        {
+          name: "IDX:BRIS",
+          displayName: "PT Bank Syariah Indonesia (Persero) Tbk",
+        },
+        { name: "IDX:ARTO", displayName: "PT Bank Jago Tbk" },
       ],
     },
     {
       name: "Technology",
       symbols: [
-        { name: "NASDAQ:AAPL", displayName: "Apple" },
-        { name: "NASDAQ:GOOGL", displayName: "Alphabet" },
-        { name: "NASDAQ:MSFT", displayName: "Microsoft" },
-        { name: "NASDAQ:FB", displayName: "Meta Platforms" },
-        { name: "NYSE:ORCL", displayName: "Oracle Corp" },
-        { name: "NASDAQ:INTC", displayName: "Intel Corp" },
+        { name: "IDX:GOTO", displayName: "PT GoTo Gojek Tokopedia Tbk" },
+        { name: "IDX:BUKA", displayName: "PT Bukalapak.com Tbk" },
+        { name: "IDX:EMTK", displayName: "PT Elang Mahkota Teknologi Tbk" },
+        { name: "IDX:DCII", displayName: "PT DCI Indonesia Tbk" },
+        { name: "IDX:MTDL", displayName: "PT Metrodata Electronics Tbk" },
+        { name: "IDX:WIFI", displayName: "PT Solusi Sinergi Digital Tbk" },
       ],
     },
     {
-      name: "Services",
+      name: "Energy & Resources",
       symbols: [
-        { name: "NASDAQ:AMZN", displayName: "Amazon" },
-        { name: "NYSE:BABA", displayName: "Alibaba Group Hldg Ltd" },
-        { name: "NYSE:T", displayName: "At&t Inc" },
-        { name: "NYSE:WMT", displayName: "Walmart" },
-        { name: "NYSE:V", displayName: "Visa" },
+        { name: "IDX:ANTM", displayName: "PT ANTAM (Persero) Tbk" },
+        { name: "IDX:PGEO", displayName: "PT Pertamina Geothermal Energy Tbk" },
+        { name: "IDX:ADRO", displayName: "PT Alamtri Resources Indonesia Tbk" },
+        { name: "IDX:PTBA", displayName: "PT Bukit Asam (Persero) Tbk" },
+        { name: "IDX:ITMG", displayName: "PT Indo Tambangraya Megah Tbk" },
+        { name: "IDX:MEDC", displayName: "PT Medco Energi Internasional Tbk" },
       ],
     },
   ],
@@ -344,9 +355,9 @@ export const CANDLE_CHART_WIDGET_CONFIG: (
   height: 600,
 });
 
-export const BASELINE_WIDGET_CONFIG: (
+export const BASELINE_WIDGET_CONFIG: (symbol: string) => ChartWidgetConfig = (
   symbol: string,
-) => ChartWidgetConfig = (symbol: string) => ({
+) => ({
   allow_symbol_change: false,
   calendar: false,
   details: false,
