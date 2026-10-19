@@ -421,6 +421,14 @@ export const COMPANY_FINANCIALS_WIDGET_CONFIG: (
 });
 
 export const POPULAR_STOCK_SYMBOLS: string[] = [
+  // Finance
+  "BBCA",
+  "BBRI",
+  "BBNI",
+  "BMRI",
+  "BRIS",
+  "ALTO",
+
   // Tech Giants (the big technology companies)
   "AAPL",
   "MSFT",
@@ -433,53 +441,21 @@ export const POPULAR_STOCK_SYMBOLS: string[] = [
   "ORCL",
   "CRM",
 
-  // Growing Tech Companies
-  "ADBE",
-  "INTC",
-  "AMD",
-  "PYPL",
-  "UBER",
-  "ZOOM",
-  "SPOT",
-  "SQ",
-  "SHOP",
-  "ROKU",
+  // Technology
+  "GOTO",
+  "BUKA",
+  "EMTK",
+  "DCII",
+  "MTDL",
+  "WIFI",
 
-  // Newer Tech Companies
-  "SNOW",
-  "PLTR",
-  "COIN",
-  "RBLX",
-  "DDOG",
-  "CRWD",
-  "NET",
-  "OKTA",
-  "TWLO",
-  "ZM",
-
-  // Consumer & Delivery Apps
-  "DOCU",
-  "PTON",
-  "PINS",
-  "SNAP",
-  "LYFT",
-  "DASH",
-  "ABNB",
-  "RIVN",
-  "LCID",
-  "NIO",
-
-  // International Companies
-  "XPEV",
-  "LI",
-  "BABA",
-  "JD",
-  "PDD",
-  "TME",
-  "BILI",
-  "DIDI",
-  "GRAB",
-  "SE",
+  // Energy & Resources
+  "ANTM",
+  "PGEO",
+  "ADRO",
+  "PTBA",
+  "ITMG",
+  "PGEO",
 ];
 
 export const NO_MARKET_NEWS: string =
