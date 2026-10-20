@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/command";
 import { Loader2, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import WatchlistButton from "./WatchlistButton";
 
 const SearchCommand = ({
   renderAs = "button",
@@ -68,6 +69,14 @@ const SearchCommand = ({
     setOpen(false);
     setSearchTerm("");
     setStocks(initialStocks);
+  };
+
+  const handleWatchlistChange = async (symbol: string, isAdded: boolean) => {
+    setStocks(
+      initialStocks?.map((stock) =>
+        stock.symbol === symbol ? { ...stock, isInWatchlist: isAdded } : stock,
+      ) || [],
+    );
   };
 
   return (
@@ -126,6 +135,13 @@ const SearchCommand = ({
                           {stock.symbol} | {stock.exchange} | {stock.type}
                         </div>
                       </div>
+                      <WatchlistButton
+                        symbol={stock.symbol}
+                        company={stock.name}
+                        isInWatchlist={stock.isInWatchlist}
+                        onWatchlistChange={handleWatchlistChange}
+                        type="icon"
+                      />
                     </Link>
                   </li>
                 ))}
