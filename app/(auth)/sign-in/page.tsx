@@ -8,8 +8,6 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
-export const instant = false;
-
 const SignIn = () => {
   const router = useRouter();
   const {
