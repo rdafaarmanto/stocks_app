@@ -13,6 +13,8 @@ import {
 } from "@/lib/constants";
 import { notFound } from "next/navigation";
 
+export const instant = false;
+
 const StockDetails = async ({ params }: StockDetailsPageProps) => {
   const { symbol } = await params;
   const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;

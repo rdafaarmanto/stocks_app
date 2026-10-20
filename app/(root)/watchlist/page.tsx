@@ -4,6 +4,8 @@ import { searchStocks } from "@/lib/actions/finnhub.actions";
 import { getWatchlistWithData } from "@/lib/actions/watchlist.actions";
 import { Star } from "lucide-react";
 
+export const instant = false;
+
 const WatchlistPage = async () => {
   const watchlist = await getWatchlistWithData();
   const initialStocks = await searchStocks();
